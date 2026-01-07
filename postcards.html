@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>FishCake Collective</title>
@@ -19,84 +14,138 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="image"><img src="images/logo.png" width ="400" alt="FishCake Collective logo" /></span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
+							<ul class="horizontal-list-inline">
+								<li><a href="index.html"><img src="images/assets/logo.png" height="100"></a></li>
+								<li><a href="order.html"><img src="images/assets/cart.png" height="100"></a></li>
+							</ul>
 						</div>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="order.html">Place Order</a></li>
-						</ul>
+						<img class="product-image" src="images/products/placeholder.png" id="targetImage">
+						<h2 id="productName">Name</h2>
+						<div class="item-row">
+							<select id="quantity" name="quantity">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							<a href="#" id="addToCartButton"><img src="images/assets/addtoorder.png" height="30"></a>
+						</div>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Postcards - $5 Each</h1>
+							<img src="images/assets/postcards-text.png" height="70px";>
 							<section class="tiles">
+
 								<article class="image">
 									<span class="image">
-										<img src="images/products/youare.png" alt="The Cunning Linguist" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/youare.png"
+											alt="The Cunning Linguist"
+											data-target="targetImage"
+											data-image="images/products/postcards/youare.png"
+											data-name="The Cunning Linguist - Postcard">
+										</a>
 									</span>
 										<h2>The Cunning Linguist</h2>
 								</article>
 
 								<article class="image">
 									<span class="image">
-										<img src="images/products/robot.png" alt="Robot Sketch" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/robot.png"
+											alt="Robot Sketch"
+											data-target="targetImage"
+											data-image="images/products/postcards/robot.png"
+											data-name="Robot Sketch - Postcard">
+										</a>
 									</span>
 										<h2>Robot Sketch</h2>
 								</article>
 
 								<article class="image">
 									<span class="image">
-										<img src="images/products/weirdhorse.png" alt="WEIRD HORSE" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/weirdhorse.png"
+											alt="WEIRD HORSE"
+											data-target="targetImage"
+											data-image="images/products/postcards/weirdhorse.png"
+											data-name="WEIRD HORSE - Postcard">
+										</a>
 									</span>
 										<h2>WEIRD HORSE</h2>
 								</article>
 
 								<article class="image">
 									<span class="image">
-										<img src="images/products/dentist.png" alt="What I Saw In That Room" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/dentist.png"
+											alt="What I Saw In That Room"
+											data-target="targetImage"
+											data-image="images/products/postcards/dentist.png"
+											data-name="What I Saw In That Room - Postcard">
+										</a>
 									</span>
 										<h2>What I Saw In That Room</h2>
 								</article>
 
 								<article class="image">
 									<span class="image">
-										<img src="images/products/clover.png" alt="Ebolable" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/clover.png"
+											alt="Ebolable"
+											data-target="targetImage"
+											data-image="images/products/postcards/clover.png"
+											data-name="Ebolable - Postcard">
+										</a>
 									</span>
 										<h2>Ebolable</h2>
 								</article>
 								
 								<article class="image">
 									<span class="image">
-										<img src="images/products/mantis.png" alt="JUST CUT THE CORD" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/mantis.png"
+											alt="JUST CUT THE CORD"
+											data-target="targetImage"
+											data-image="images/products/postcards/mantis.png"
+											data-name="JUST CUT THE CORD - Postcard">
+										</a>
 									</span>
 										<h2>JUST CUT THE CORD</h2>
 								</article>
 
 								<article class="image">
 									<span class="image">
-										<img src="images/products/miku.png" alt="Love Love Miku!" />
+										<a href="#menu"><img
+											class="clickableImage postcard"
+											src="images/products/postcards/miku.png"
+											alt="Love Love Miku!"
+											data-target="targetImage"
+											data-image="images/products/postcards/miku.png"
+											data-name="Love Love Miku! - Postcard">
+										</a>
 									</span>
 										<h2>Love Love Miku!</h2>
 								</article>
+
 							</section>
 						</div>
 					</div>
@@ -115,11 +164,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/cart.js"></script>
+		<script src="assets/js/imageswap.js"></script>
 
 	</body>
 </html>

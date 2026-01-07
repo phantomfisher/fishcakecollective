@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>FishCake Collective</title>
@@ -15,20 +10,6 @@
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
 				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
@@ -43,7 +24,9 @@
 						<div class="inner">
 							<h1>Thank you!</h1>
 							<span class="image main"><img src="images/hero.png" alt="" /></span>
-							<h1>You will receive an invoice for your order once we process your order.</h1>
+							<h1>You will receive an invoice for your order
+								<br>once it's ready for shipping.
+							</h1>
 							<a href="index.html"><button type="button" class="button">Home</button></a>
 						</div>
 						
@@ -70,6 +53,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					// Clear cart data
+					localStorage.removeItem("cart");
+
+					// Optional: clear any other related keys
+					localStorage.removeItem("cartTotal");
+					localStorage.removeItem("cartCount");
+
+					console.log("Cart cleared after order completion");
+				});
+			</script>
 
 	</body>
 </html>

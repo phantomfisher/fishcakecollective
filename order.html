@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>FishCake Collective</title>
@@ -15,49 +10,27 @@
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="image"><img src="images/logo.png" width ="400" alt="FishCake Collective logo" /></span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="order.html">Place Order</a></li>
+				<header id="header">
+					<div class="inner">
+						<ul class="horizontal-list-inline">
+							<li><a href="index.html"><img src="images/assets/logo.png" height="100"></a></li>
+							<li><a href="order.html"><img src="images/assets/cart.png" height="100"></a></li>
 						</ul>
-					</nav>
-
+					</div>
+				</header>
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Place Order</h1>
-							<p>Select the items you would like to order, and once we receive your request, we will send you an invoice to your email.
-								<br>Once the invoice is paid, we will ship out your order and send you tracking information.
+							<p>When you place your order, you should receive an email confirmation.
+								<br>Once we confirm your order, we will send an invoice to your email, and once paid your items will be shipped.
 							</p>
-							<form method="post" action="https://formspree.io/f/xeejnvyo">
+							<form id="orderForm" method="post">
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="Name" placeholder="Name" required/>
 									</div>
 									<div class="field half">
-										<input type="email" name="Email" placeholder="Email" required/>
+										<input type="email" name="Email" placeholder="Email" id="userEmail" required/>
 									</div>
 									<div class="field">
 										<input type="text" name="Address" placeholder="Address" required/>
@@ -124,82 +97,22 @@
 										<input type="text" name="Zip" placeholder="Zip Code" required/>
 									</div>
 
-									<!-- Order Items -->
-									<div class="field">
-										<h3>Items</h3>
+									<input type="hidden" name="Cart" id="cartData">
 
-										<div id="items-container">
-											<div class="item-row">
-											<select name="Items" required id="items-select">
-												<option value="">Select Item</option>
-
-												<!-- Stickers -->
-												<option value="Red Velvet Worm" class="sticker">Red Velvet Worm</option>
-												<option value="Blue Dobson Fly" class="sticker">Blue Dobson Fly</option>
-												<option value="Purple Sheep Ked" class="sticker">Purple Sheep Ked</option>
-												<option value="Ironworm" class="sticker">Ironworm</option>
-												<option value="Takopi" class="sticker">Takopi</option>
-												<option value="Keroro" class="sticker">Keroro</option>
-												<option value="Fisherman's Money Spread" class="sticker">Fisherman's Money Spread</option>
-												<option value="Wasted Fisherman" class="sticker">Wasted Fisherman</option>
-												<option value="Reacting Fisherman" class="sticker">Reacting Fisherman</option>
-												<option value="Pointing Fisherman" class="sticker">Pointing Fisherman</option>
-												<option value="Yian Kut-ku" class="sticker">Yian Kut-ku</option>
-												<option value="Khezu" class="sticker">Khezu</option>
-												<option value="Basilisk" class="sticker">Basilisk</option>
-												<option value="Mimic" class="sticker">Mimic</option>
-												<option value="Paras" class="sticker">Paras</option>
-												<option value="Crustle" class="sticker">Crustle</option>
-
-												<!-- Resin -->
-												<option value="Red Velvet Worm" class="resin">Red Velvet Worm</option>
-												<option value="Blue Velvet Worm" class="resin">Blue Velvet Worm</option>
-												<option value="Purple Velvet Worm" class="resin">Purple Velvet Worm</option>
-												<option value="Red Dobson Fly" class="resin">Red Dobson Fly</option>
-												<option value="Blue Dobson Fly" class="resin">Blue Dobson Fly</option>
-												<option value="Purple Dobson Fly" class="resin">Purple Dobson Fly</option>
-												<option value="Red Sheep Ked" class="resin">Red Sheep Ked</option>
-												<option value="Blue Sheep Ked" class="resin">Blue Sheep Ked</option>
-												<option value="Purple Sheep Ked" class="resin">Purple Sheep Ked</option>
-
-												<!-- Postcards -->
-												<option value="The Cunning Linguist" class="postcard">The Cunning Linguist</option>
-												<option value="Robot Sketch" class="postcard">Robot Sketch</option>
-												<option value="WEIRD HORSE" class="postcard">WEIRD HORSE</option>
-												<option value="What I saw In That Room" class="postcard">What I saw In That Room</option>
-												<option value="Ebolable" class="postcard">Ebolable</option>
-												<option value="JUST CUT THE CORD" class="postcard">JUST CUT THE CORD</option>
-												<option value="Love Love Miku!" class="postcard">Love Love Miku!</option>
-											</select>
-
-
-												<input
-													type="number"
-													name="Quantites"
-													min="1"
-													value="1"
-													placeholder="Qty"
-													required
-												/>
-
-												<button type="button" class="button small remove-item">
-													Remove
-												</button>
-											</div>
-										</div>
-
-										<button type="button" class="button small" id="add-item">
-											+ Add Another Item
-										</button>
+									<div id="cartContainer" style="padding: 30px;">
+										<ul id="cartItems"></ul>
 									</div>
-
 
 								</div>
 
-
-
 								<ul class="actions">
-									<li><input type="submit" value="Send" class="primary" /></li>
+									<li>
+										<input type="image" 
+											src="images/assets/placeorder-text.png" 
+											alt="Submit Form" 
+											height="70" 
+											class="primary">
+									</li>
 								</ul>
 							</form>
 						</div>
@@ -226,11 +139,18 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/orders.js"></script>
-			<script src="assets/js/submit.js"></script>
 			<script src="assets/js/prices.js"></script>
 			<script src="assets/js/pricing.js"></script>
+			<script src="assets/js/imageswap.js"></script>
+			<script src="assets/js/cart.js"></script>
+			<script src="assets/js/server.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+			<script>
+				(function(){
+					emailjs.init("5wv40qnVv956Yt1RY");
+				})();
 			</script>
+			<script src="assets/js/submit.js"></script>
+
 	</body>
-
 </html>
-
