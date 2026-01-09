@@ -3389,3 +3389,35 @@ input, select, textarea {
 	left: 0;
 
 }
+
+.icon.instagram-logo-alt,
+.icon.bluesky-logo-alt {
+  position: relative;
+}
+
+.icon.instagram-logo-alt:before,
+.icon.bluesky-logo-alt:before {
+  font-family: none !important;
+  content: '' !important;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2em;
+  height: 2em;
+
+  transform: translate(-50%, -50%);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon.instagram-logo-alt:before {
+  background-image: url("../../images/assets/instagram-logo-alt.svg");
+}
+
+.icon.bluesky-logo-alt:before {
+  background-image: url("../../images/assets/bluesky-logo-alt.svg");
+}
